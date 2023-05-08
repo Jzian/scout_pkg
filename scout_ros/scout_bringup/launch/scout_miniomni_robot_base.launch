@@ -8,7 +8,7 @@
     <arg name="is_scout_omni" default="true" />
     <arg name="pub_tf" default="false" />
 
-    <include file="~/scout-mini_ws/src/scout_ros/scout_base/launch/scout_mini_omni.launch">
+    <include file="$(find scout_base)/launch/scout_mini_omni.launch">
         <arg name="port_name" default="$(arg port_name)" />
         <arg name="simulated_robot" default="$(arg simulated_robot)" />
         <arg name="odom_topic_name" default="$(arg odom_topic_name)" />
@@ -17,8 +17,9 @@
         <arg name="pub_tf" default="$(arg pub_tf)" />
     </include>
 
-    <include file="~/scout-mini_ws/src/scout_ros/scout_description/launch/description.launch">
+    <include file="$(find scout_description)/launch/description.launch">
         <arg name="model_xacro" default="$(arg model_xacro)" />
     </include>
 
 </launch>
+ 
